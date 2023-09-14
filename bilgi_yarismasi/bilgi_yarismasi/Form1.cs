@@ -16,23 +16,25 @@ namespace bilgi_yarismasi
         public Form1()
         {
             InitializeComponent();
-            BtnA.Enabled = false;
-            BtnB.Enabled = false;
-            BtnC.Enabled = false;
-            BtnD.Enabled = false;
+            BtnKapa();
             BtnSonra.Text = "Başla";
             richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         int soruno = 0, dogru = 0, yanlis = 0;
 
-        private void BtnB_Click(object sender, EventArgs e)
+        void BtnKapa()
         {
-
             BtnA.Enabled = false;
             BtnB.Enabled = false;
             BtnC.Enabled = false;
             BtnD.Enabled = false;
+        }
+
+        private void BtnB_Click(object sender, EventArgs e)
+        {
+
+            BtnKapa();
 
             LblCevap.Text = BtnB.Text;
 
@@ -55,10 +57,7 @@ namespace bilgi_yarismasi
 
         private void BtnC_Click(object sender, EventArgs e)
         {
-            BtnA.Enabled = false;
-            BtnB.Enabled = false;
-            BtnC.Enabled = false;
-            BtnD.Enabled = false;
+            BtnKapa();
 
             LblCevap.Text = BtnC.Text;
 
@@ -81,10 +80,7 @@ namespace bilgi_yarismasi
 
         private void BtnD_Click(object sender, EventArgs e)
         {
-            BtnA.Enabled = false;
-            BtnB.Enabled = false;
-            BtnC.Enabled = false;
-            BtnD.Enabled = false;
+            BtnKapa();
 
             LblCevap.Text = BtnD.Text;
 
@@ -108,10 +104,7 @@ namespace bilgi_yarismasi
         private void BtnA_Click(object sender, EventArgs e)
         {
 
-            BtnA.Enabled = false;
-            BtnB.Enabled = false;
-            BtnC.Enabled = false;
-            BtnD.Enabled = false;
+            BtnKapa();
 
             LblCevap.Text =BtnA.Text;
 
@@ -216,10 +209,7 @@ namespace bilgi_yarismasi
                 LblSoruno.Text = "-";
                 BtnSonra.Text = "Sonuçlar";
                 richTextBox1.Text = "Cevaplama işlemi tamamlanmıştır.";
-                BtnA.Enabled = false;
-                BtnB.Enabled = false;
-                BtnC.Enabled = false;
-                BtnD.Enabled = false;
+                BtnKapa();
                 BtnSonra.Enabled = false;
                 BtnA.Text = "A";
                 BtnB.Text = "B";
